@@ -13,30 +13,10 @@
       },
     "routes": [
       {
-        "route": "/test.html",
-        "allowedRoles": ["authenticated"]
-      },
-      {
-        "route": "/private.html",
-        "allowedRoles": ["customrole"]
-      },
-      {
-        "route": "/login",
-        "redirect": "jwlogin.html"
-      },
-      {
-        "route": "/logout",
-        "redirect": "/.auth/logout"
-      },
-      {
         "route": "/*",
-        "allowedRoles": ["anonymous"]
+        "allowedRoles": ["authenticated"]
       }
     ],
-    "navigationFallback": {
-      "rewrite": "fallback.html",
-      "exclude": ["/images/*.{png,jpg,gif}", "/css/*", "/1/*.html", "/profile*"]
-    },
     "responseOverrides": {
       "400": {
         "rewrite": "/400.html"
