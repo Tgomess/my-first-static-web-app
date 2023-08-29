@@ -1,9 +1,24 @@
 {
     "routes": [
         {
+            "route": "/teste.html",
+            "allowedRoles": [
+                "authenticated",
+                "special"
+            ]
+        },
+        {
+            "route": "/login",
+            "rewrite": "/.auth/login/aad"
+        },
+        {
+            "route": "/logout",
+            "redirect": "/.auth/logout"
+        },
+        {
             "route": "/*",
             "allowedRoles": [
-                "authenticated"
+                "anonymous"
             ]
         }
     ],
