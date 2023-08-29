@@ -30,7 +30,7 @@
       },
       {
         "route": "/*",
-        "allowedRoles": ["authenticated"]
+        "allowedRoles": ["anonymous"]
       }
     ],
     "responseOverrides": {
